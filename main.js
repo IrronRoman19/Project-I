@@ -25,10 +25,11 @@ function saveTasks() {
   inputs[1].value = '';
 
   loadTasks();
-
+  
 }
   
 function loadTasks(){
+  
   let currentTasks = localStorage.getItem('allTasks');
   if (currentTasks) {
     let tasks = `<div class="tasks">`;
