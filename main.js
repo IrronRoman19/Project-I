@@ -26,8 +26,9 @@ function saveTasks() {
 
   loadTasks();
   
+
 }
-  
+
 function loadTasks(){
   
   let currentTasks = localStorage.getItem('allTasks');
@@ -66,20 +67,27 @@ function loadTasks(){
 
 }
 
-function deleteTask(event) {
+function deleteTask(iconId) {
  
-  let arr = JSON.parse(localStorage.getItem('allTasks')); 
-  
-  for (const i = 0; i < arr.length; i++) {
-      arr = JSON.parse(arr[i]);
-      if (arr.id === id) {
-        event.target.arr.splice(i, 1);
-      }
+
+  const index = arr.findIndex(task => task.id === iconId);
+
+  if (index > -1) {
+    arr.splice(index, 1);
   }
+
+  // let arr = JSON.parse(localStorage.getItem('allTasks')); 
   
-  arr = JSON.stringify(arr);
+  // for (const i = 0; i < arr.length; i++) {
+  //     arr = JSON.parse(arr[i]);
+  //     if (arr.id === id) {
+  //       event.target.arr.splice(i, 1);
+  //     }
+  // }
   
-  localStorage.setItem("allTasks", currentTasks);
+  // arr = JSON.stringify(arr);
+  
+  // localStorage.setItem("allTasks", currentTasks);
 
 }
 
