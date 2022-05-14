@@ -59,9 +59,6 @@ function loadTasks(){
         </div>
        </div>  
         `;
-
-
-
     }
 
     tasks += `</div>`;
