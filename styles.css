@@ -43,11 +43,11 @@ body {
 
 }
 
-#hiddenRemButton {
+#iconId {
     visibility: hidden;
 }
 
-#hiddenRemButton:hover {
+#iconId:hover {
     transition: all 3s;
     cursor: pointer;
 }
