@@ -24,8 +24,11 @@ function saveTasks() {
   inputs[0].value = '';
   inputs[1].value = '';
 
+  for(let i = 0; i > arr.length; i++ ) {
+    console.log(i)
+  }
+
   loadTasks();
-  
 
 }
 
@@ -38,8 +41,8 @@ function loadTasks(){
     const arr = JSON.parse(currentTasks);
         
     for (const task of arr) {
-
-      tasks += `<div id="index" class="note mb-4 p-2">
+      
+       tasks += `<div id="index" class="note mb-4 p-2">
         <div class="deleteTask" class="mr-4" align="right">
           <button id="iconId">
           <svg class="hiddenDelete" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
@@ -54,8 +57,11 @@ function loadTasks(){
         <div class="m-1">
           <p>${task.data}<br>${task.time}</p>
         </div>
-      </div>  
+       </div>  
         `;
+
+
+
     }
 
     tasks += `</div>`;
@@ -72,7 +78,6 @@ function deleteTask(iconId) {
   const arr = JSON.parse(localStorage.getItem("allTasks"));
   arr.splice(iconId, 1);
   localStorage.setItem("allTasks", JSON.stringify(arr));
-  iconId.div.parentNode.removeChild(div);
 
 }
 
@@ -82,8 +87,10 @@ function onWindowLoad() {
   form.onsubmit = saveTasks;
 
   loadTasks();  
+  
+  const hiddenDelete = document.querySelectorAll(".hiddenDelete");
 
-  const iconId = document.querySelector("#iconId");
+  for (const iconId of hiddenDelete)
   iconId.addEventListener("click", deleteTask);
 
 }
