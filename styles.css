@@ -43,11 +43,11 @@ body {
 
 }
 
-#iconId {
+.hideDelButton {
     visibility: hidden;
 }
 
-#iconId:hover {
+.hideDelButton:hover {
     transition: all 3s;
     cursor: pointer;
 }
