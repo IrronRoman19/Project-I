@@ -72,7 +72,7 @@ function deleteTask(event) {
   
   for (const i = 0; i < arr.length; i++) {
       arr = JSON.parse(arr[i]);
-      if (arr.id == 3) {
+      if (arr.id === id) {
         event.target.arr.splice(i, 1);
       }
   }
