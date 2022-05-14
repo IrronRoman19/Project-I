@@ -1,0 +1,119 @@
+body {
+    background-image: url(./assets/images/tile.jpg)
+}
+
+#copyright {
+    text-align: center;
+    color: darkblue;
+    text-shadow: 2px 2px 1px lime;
+    font-weight: bold;
+    font-style: italic;
+}
+
+#headDiv {
+    text-align: center;
+}
+
+#taskDiv {
+    text-align: center;
+}
+
+#totalTasksDiv {
+    
+    padding: 10px;
+    margin: 10px;
+}
+
+.tasks {
+    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.note {
+    animation-name: FadeInTask;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+    
+    background-image: url(./assets/images/notebg.png);
+    width: 175px;
+    height: 250px;
+
+}
+
+#hiddenRemButton {
+    visibility: hidden;
+}
+
+#hiddenRemButton:hover {
+    transition: all 3s;
+    cursor: pointer;
+}
+
+.deleteTask .hiddenDelete {
+    visibility: hidden;
+}
+ 
+.deleteTask:hover .hiddenDelete {
+    animation-name: FadeInTask;
+    animation-duration: 1s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
+    visibility: visible;
+}
+
+.taskContain {
+    text-align: center;
+    position: relative;
+}
+
+.taskTextarea {
+    resize: none;
+}
+
+#formDiv {
+    background-image: url(./assets/images/formbg.jpg);
+    width: 40%;
+    height: 20%;
+    border: 1px solid black;
+    color: darkblue;
+    text-shadow: 2px 2px 1px lime;
+    font-weight: bold;
+    font-style: italic;
+    margin: auto;
+    padding: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+input {
+    resize: none;
+}
+
+#taskInput {
+    resize: none;
+    position: relative;
+}
+
+h1 {
+    color: blue;
+    text-shadow: 2px 2px 1px yellow;
+    text-align: center;
+    font-family: wolf;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: wolf;
+    src: url(./assets/fonts/wolfenstein.ttf);
+  }
+
+@keyframes FadeInTask {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+
