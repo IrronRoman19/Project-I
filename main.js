@@ -67,12 +67,14 @@ function loadTasks(){
 
 function deleteTask(event) {
  
+  console.log(event)
+  alert(event.target.getAttribute('id'))
   let arr = JSON.parse(localStorage.getItem('allTasks')); 
   
   for (const i = 0; i < arr.length; i++) {
       arr = JSON.parse(arr[i]);
       if (arr.id == 3) {
-        arr.splice(i, 1);
+        event.target.arr.splice(i, 1);
       }
   }
   
